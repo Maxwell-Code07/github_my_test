@@ -1,0 +1,76 @@
+name: 🐛 Bug Report
+description: 报告插件使用中的问题
+title: "[Bug] "
+labels: ["bug"]
+assignees:
+body:
+
+  - type: input
+    id: openclaw-version
+    attributes:
+      label: OpenClaw 版本 | OpenClaw Version
+      placeholder: 例如：2026.3.13
+    validations:
+      required: true
+
+  - type: input
+    id: plugin-version
+    attributes:
+      label: TencentDB-Agent-Memory 插件版本 | Plugin Version
+      placeholder: 例如：0.1.0
+    validations:
+      required: true
+
+  - type: dropdown
+    id: os
+    attributes:
+      label: 操作系统 | Platform
+      options:
+        - Windows 11
+        - macOS 14
+        - Ubuntu 22.04
+        - 其他（请在补充信息中说明）
+    validations:
+      required: true
+
+  - type: textarea
+    id: bug-description
+    attributes:
+      label: 问题描述 | Describe the bug
+      description: 清晰简洁地描述你遇到的问题 | A clear and concise description of what the bug is
+      placeholder: 请详细说明问题现象...
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: 复现步骤 | To Reproduce
+      description: 复现该问题的操作步骤 | Steps to reproduce the behavior
+      placeholder: "1. 执行操作/调用接口\n2. 传入参数/配置\n3. 出现报错/异常"
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected-behavior
+    attributes:
+      label: 预期行为 | Expected behavior
+      description: 你期望的正确结果 | A clear and concise description of what you expected to happen
+    validations:
+      required: true
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: 报错日志/截图 | Error Logs / Screenshots
+      description: 请附上完整报错日志或截图 | Please attach full error logs or screenshots
+    validations:
+      required: false
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: 补充信息 | Additional context
+      description: 其他相关信息 | Add any other context about the problem here
+    validations:
+      required: false
