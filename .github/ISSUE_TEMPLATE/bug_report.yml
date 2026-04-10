@@ -2,9 +2,8 @@ name: 🐛 Bug Report
 description: 报告插件使用中的问题
 title: "[Bug] "
 labels: ["bug"]
-assignees:
+assignees: []
 body:
-
   - type: input
     id: openclaw-version
     attributes:
