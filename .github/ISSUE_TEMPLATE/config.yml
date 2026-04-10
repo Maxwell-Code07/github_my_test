@@ -1,0 +1,6 @@
+# 模板选择器配置
+blank_issues_enabled: false  # 禁止空白 Issue，强制用户用模板
+contact_links:
+  - name: 项目文档
+    url: https://github.com/Maxwell-Code07/github_my_test
+    about: 请先查阅项目文档再提交 Issue
