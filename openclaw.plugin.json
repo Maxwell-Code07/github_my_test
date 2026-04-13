@@ -1,0 +1,8 @@
+{
+  "id": "ci-test-plugin",
+  "name": "CI Test Plugin",
+  "configSchema": {
+    "type": "object",
+    "additionalProperties": false
+  }
+}
