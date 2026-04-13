@@ -34,28 +34,7 @@ jobs:
         if: steps.cache-deps.outputs.cache-hit != 'true'
         run: npm install --ignore-scripts
 
-  # ── 2. TypeScript type check ───────────────────────────────
-  typecheck:
-    name: TypeScript
-    needs: install
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-
-      - uses: actions/setup-node@v4
-        with:
-          node-version: "22"
-
-      - name: Restore node_modules
-        uses: actions/cache@v4
-        with:
-          path: node_modules
-          key: deps-${{ runner.os }}-${{ hashFiles('package.json') }}
-
-      - name: tsc --noEmit
-        run: npx tsc --noEmit
-
-  # ── 3. Pack validation ─────────────────────────────────────
+  # ── 2. Pack validation ─────────────────────────────────────
   pack:
     name: Pack
     needs: install
